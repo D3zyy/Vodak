@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="/static/mujstyl.css" />
+<title>Úvodní stránka</title>
+<body>
+
+<div id="welcome-div"> 
+<h1> Vítejte!</h1>
+<span style='font-size:50px; text-align: center;'> &#128675;</span> 
+<p>Rozsazení v lodích na vodáckém kurzu 2023 SPŠE Ječná</p>
+<a id="registr-button" href="/registrace">Registrovat se</a>
+
+</div>
+<div id="registred-people">
+    <h1 style="text-decoration: underline; display: inline-block;">Již přihlášení studenti </h1> <span style="font-size: x-large;">&#129299;</span>
+    <ul>
+        {% for person in people %}
+            <li style="list-style-type: none;">
+                <p style="text-decoration: none;">
+                    <strong>Přezdívka:</strong> {{ person.prezdivka }}<br>
+                    <p><strong>Plave:</strong> {% if person.plave == "1" %}Ano{% else %}Ne{% endif %}</p>
+                    <strong>Kamarád:</strong> {{ person.kamarad }}<br>
+                </p>
+            </li>
+        {% endfor %}
+    </ul>
+
+</div>
+</body>
+</html>

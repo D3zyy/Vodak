@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="/static/registrace.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/static/validace.js"></script>
+<title>Registrace</title>
+<body>
+
+<h2>Registrace na zájezd</h2>
+<form id="form" action="/registrace" method="post">
+    <h2>Registrace na zájezd</h2>
+    <table>
+      <tr>
+        <td>
+          <label for="nick">Přezdívka:</label>
+        </td>
+        <td>
+          <input type="text" id="nick" name="nick" pattern="[A-Za-z0-9]{2,20}" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="je_plavec">Umíte plavat:</label>
+        </td>
+        <td>
+          <select id="je_plavec" name="je_plavec" required>
+            <option value="1" selected>Ano</option>
+            <option value="0">Ne</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="kanoe_kamarad">S kým chcete být na lodi:</label>
+        </td>
+        <td>
+          <input type="text" id="kanoe_kamarad" name="kanoe_kamarad">
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input id="sub-btn" type="submit" value="Odeslat">
+          <br>
+          <a id="str-btn" href="/">Storno</a>
+        </td>
+      </tr>
+    </table>
+  </form>
+  
+
+</body>
+</html>
