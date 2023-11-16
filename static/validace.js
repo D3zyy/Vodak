@@ -22,7 +22,7 @@ $(document).ready(function() {
                     }
                 },
                 error: function() {
-                    $("#nick").val("Chyba nastala!");
+                    $("#kanoe_kamarad").css("background-color", "#f08080");
                 }
             });
         }
@@ -104,7 +104,7 @@ $(document).ready(function() {
                     }
                 },
                 error: function() {
-                    $("#nick").val("Chyba nastala!");
+                    $("#nick").css("background-color", "#f08080");
                 }
             });
         }
